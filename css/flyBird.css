@@ -1,0 +1,124 @@
+.show{
+    display: block;
+}
+.hidden{
+    display: none;
+}
+#contain{
+    position: relative;
+    width: 343px;
+    height: 480px;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 1px solid;
+}
+#bg{
+    width: 343px;
+    height: 480px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: url(../img/bg.jpg) no-repeat;
+}
+#game-title{
+    position: absolute;
+    width: 236px;
+    height: 77px;
+    background: url(../img/head.jpg) no-repeat;
+    animation: blink 0.4s;
+    animation-iteration-count: infinite;
+}
+@keyframes blink{
+    0%{ margin:80px 0 0 38px; }
+    50%{ margin:84px 0 0 38px; }
+    100%{ margin:80px 0 0 38px; }
+}
+#stupid-bird{
+    position: absolute;
+    width: 40px;
+    height: 26px;
+    background: url(../img/bird1.png) no-repeat;
+    animation: bird 0.4s;
+    animation-iteration-count: infinite;
+}
+@keyframes bird{
+    0%{ margin:95px 0 0 240px; background: url(../img/bird1.png) no-repeat;}
+    25%{ margin:98px 0 0 240px; background: url(../img/bird0.png) no-repeat;}
+    50%{ margin:100px 0 0 240px; background: url(../img/bird1.png) no-repeat;}
+    75%{ margin:98px 0 0 240px; background: url(../img/bird0.png) no-repeat;}
+    100%{ margin:95px 0 0 240px; background: url(../img/bird1.png) no-repeat;}
+}
+#banner{
+    width: 686px;
+    height: 14px;
+    background: url(../img/banner.jpg) repeat-x;
+    margin-top: 423px;
+    animation: run 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes run{
+    0%{ margin-left: 0; }
+    100%{ margin-left: -343px; }
+}
+#start{
+    width: 85px;
+    height: 29px;
+    background: url(../img/start.jpg) no-repeat;
+    margin: -180px auto 0 auto;
+}
+#bird{
+    position: absolute;
+    left: 20px;
+    width: 40px;
+    height: 26px;
+    background: url(../img/bird0.png) no-repeat;
+    animation: fly 0.4s;
+    animation-iteration-count: 4;
+}
+@keyframes fly{
+    0%{ opacity: 1; }
+    50%{ opacity: 0; }
+    100%{ opacity: 1; }
+}
+.pipe-mod{
+    display: inline-block;
+}
+.top-pipe,.bottom-pipe{
+    width:62px;
+    height:60px;
+    background:url(../img/down_pipe.png) no-repeat;
+}   
+.top-mod,.bottom-mod{
+    width:62px;
+    background:url(../img/down_mod.png) repeat;
+}
+.top-mod,.top-pipe{
+    transform: rotate(180deg);
+}
+.top{
+    position: absolute;
+    top:0;
+}
+.bottom{
+    position: absolute;
+    bottom:57px;
+}
+#game-over{
+    position: absolute;
+    z-index: 1;
+    top:100px;
+    left: 60px;
+    width:221px;
+    height: 40px;
+    background:url(../img/game_over.jpg) no-repeat;
+}
+#replay{
+    position: absolute;
+    z-index: 1;
+    top:160px;
+    left: 130px;
+    width: 85px;
+    height: 29px;
+    background:url(../img/start.jpg) no-repeat;
+}
+
